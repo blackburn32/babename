@@ -3,7 +3,6 @@ import { defineFontProvider } from 'unifont'
 export default defineFontProvider('mayflower', async () => {
   return {
     async resolveFont(fontFamily) {
-      if (fontFamily === 'Mayflower Antique') {
         return {
           fonts: [
             {
@@ -18,7 +17,6 @@ export default defineFontProvider('mayflower', async () => {
             }
           ]
         }
-      }
     }
   }
 })
