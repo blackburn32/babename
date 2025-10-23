@@ -38,10 +38,4 @@ export default defineNuxtConfig({
       }
     }
   },
-
-  fonts: {
-    providers: {
-      mayflower: '~/providers/mayflower'
-    }
-  }
 })
