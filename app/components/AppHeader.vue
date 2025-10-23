@@ -20,9 +20,6 @@ const items: ComputedRef<NavigationMenuItem[]> = computed(() => [{
   label: 'Patreon',
   active: activeHeadings.value.includes('patreon'),
   onSelect: (event: Event) => handleSmoothScroll(event, '#patreon')
-}, {
-  to: 'https://www.patreon.com/bePatron?u=143537464',
-  icon: 'i-tabler-brand-patreon-filled'
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
@@ -64,14 +61,19 @@ const handleSmoothScroll = (event: Event, targetId: string) => {
         variant="link"
         class="hidden lg:block"
       />
+      <UColorModeButton
+        variant="link"
+      />
     </template>
 
     <template #body>
       <UNavigationMenu
         :items="items"
+        variant="link"
         orientation="vertical"
         class="-mx-2.5"
       />
+      <UColorModeButton />
     </template>
   </UHeader>
 </template>
