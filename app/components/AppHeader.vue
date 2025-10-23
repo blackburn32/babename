@@ -30,7 +30,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
     document.querySelector('#listen'),
     document.querySelector('#about'),
     document.querySelector('#shows'),
-    document.querySelector('#patreon'),
+    document.querySelector('#patreon')
   ].filter(Boolean) as Element[])
 })
 

@@ -18,6 +18,9 @@ const columns = [{
   }, {
     label: 'Patreon',
     to: 'https://www.patreon.com/c/babename/posts'
+  }, {
+    label: 'Instagram',
+    to: 'https://www.instagram.com/babename_theband/'
   }]
 }, {
   label: 'About',
@@ -42,7 +45,10 @@ const columns = [{
             <div class="text-sm font-semibold mt-6">
               Contact:
             </div>
-            <ULink to="mailto:booking@babenametheband.com" class="hover:underline text-sm">
+            <ULink
+              to="mailto:booking@babenametheband.com"
+              class="hover:underline text-sm"
+            >
               booking@babenametheband.com
             </ULink>
           </template>
@@ -62,6 +68,14 @@ const columns = [{
         target="_blank"
         icon="i-simple-icons-patreon"
         aria-label="Babename on Patreon"
+        color="neutral"
+        variant="ghost"
+      />
+      <UButton
+        to="https://www.instagram.com/babename_theband/"
+        target="_blank"
+        icon="i-simple-icons-instagram"
+        aria-label="Babename on Instagram"
         color="neutral"
         variant="ghost"
       />

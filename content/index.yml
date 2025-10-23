@@ -43,10 +43,10 @@ about:
   members:
     - title: Alex
       description: Drums
-      class: border-l border-default pt-4 pl-4
+      class: border-l border-default pl-4
     - title: Jamie 
       description: Vocals, Guitar, Songwriting
-      class: border-l border-default pl-4
+      class: border-l border-default pt-4 pl-4
     - title: Dylan
       description: Vocals, Guitar
       class: border-l border-default pt-4 pl-4

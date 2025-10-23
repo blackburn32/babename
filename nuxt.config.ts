@@ -8,12 +8,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts'
   ],
 
-  fonts: {
-    providers: {
-      mayflower: '~/providers/mayflower'
-    }
-  },
-
   devtools: {
     enabled: true
   },
@@ -42,6 +36,12 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+
+  fonts: {
+    providers: {
+      mayflower: '~/providers/mayflower'
     }
   }
 })

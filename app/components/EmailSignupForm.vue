@@ -54,7 +54,10 @@ async function handleEmailSubmit() {
     :state="emailForm"
     @submit="handleEmailSubmit"
   >
-    <UFormField name="email" :label="page.email.header">
+    <UFormField
+      name="email"
+      :label="page.email.header"
+    >
       <UInput
         v-model="emailForm.email"
         :placeholder="page.email.placeholder"
