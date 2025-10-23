@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { h, resolveComponent } from 'vue'
+import type { TableColumn } from '@nuxt/ui'
+
 const { data: page } = await useAsyncData('index', () => queryCollection('content').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
@@ -10,6 +13,62 @@ useSeoMeta({
   description: page.value.seo?.description || page.value.description,
   ogDescription: page.value.seo?.description || page.value.description
 })
+
+type ShowRow = {
+  date: string
+  venue: string
+  isPast: boolean
+  ticketLink: string
+}
+
+const showsTableData = computed<ShowRow[]>(() => {
+  if (!page.value) {
+    return []
+  }
+  return page.value.shows.list.map((show) => {
+    const showDate = new Date(show.date)
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const isPast = showDate < today
+
+    return {
+      date: show.date,
+      venue: `${show.venue}, ${show.location}`,
+      isPast,
+      ticketLink: show.ticketLink
+    }
+  })
+})
+
+const showsTableColumns: TableColumn<ShowRow>[] = [
+  {
+    accessorKey: 'date',
+    header: 'Date'
+  },
+  {
+    accessorKey: 'venue',
+    header: 'Venue'
+  },
+  {
+    id: 'tickets',
+    header: 'Tickets',
+    cell: ({ row }) => {
+      if (row.original.isPast) {
+        return h('span', { class: 'text-muted' }, 'Past')
+      }
+      return h(resolveComponent('UButton'), {
+        to: row.original.ticketLink,
+        target: '_blank',
+        size: 'sm',
+        variant: 'outline'
+      }, () => 'Get Tickets')
+    }
+  }
+]
+
+function handleEmailSubmit(email: string) {
+  console.log('Email submitted:', email)
+}
 </script>
 
 <template>
@@ -17,37 +76,70 @@ useSeoMeta({
     v-if="page"
     class="relative"
   >
-    <div class="hidden lg:block">
-      <UColorModeImage
-        light="/images/light/line-1.svg"
-        dark="/images/dark/line-1.svg"
-        class="absolute pointer-events-none pb-10 left-0 top-0 object-cover h-[650px]"
-      />
+    <div class="block w-full">
+      <img
+        src="/images/hero.jpg"
+        class="pointer-events-none left-0 top-0 object-cover w-full max-h-[100vh]"
+      >
     </div>
 
-    <UPageHero
-      :description="page.description"
-      :links="page.hero.links"
+    <UPageSection
+      id="hero"
+      :description="page.album.description"
       :ui="{
-        container: 'md:pt-18 lg:pt-20',
-        title: 'max-w-3xl mx-auto'
+        container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
+        features: 'gap-0'
       }"
     >
-      <template #top>
-        <HeroBackground />
-      </template>
-
       <template #title>
         <MDC
-          :value="page.title"
-          unwrap="p"
+          :value="page.album.headline"
+          class="sm:*:leading-11"
         />
       </template>
-    </UPageHero>
+      <USkeleton class="w-64 h-64 self-center mx-auto" />
+      <div class="flex flex-col mx-auto gap-2">
+        <EmailSignupForm />
+      </div>
+    </UPageSection>
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      :description="page.section.description"
-      :features="page.section.features"
+      id="listen"
+      orientation="horizontal"
+      :description="page.listen.description"
+      :features="page.listen.links"
+      :ui="{
+        container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
+        features: 'gap-1'
+      }"
+    >
+      <template #title>
+        <MDC
+          :value="page.listen.headline"
+          class="sm:*:leading-11"
+        />
+      </template>
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/5WulAOx9ilWy1h8UGZ1gkI?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        :allowfullscreen="false"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      />
+    </UPageSection>
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
+    <UPageSection
+      id="about"
+      :description="page.about.description"
+      :features="page.about.members"
       orientation="horizontal"
       :ui="{
         container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
@@ -57,119 +149,53 @@ useSeoMeta({
     >
       <template #title>
         <MDC
-          :value="page.section.title"
+          :value="page.about.title"
           class="sm:*:leading-11"
         />
       </template>
       <img
-        :src="page.section.images.desktop"
-        :alt="page.section.title"
-        class="hidden lg:block 2xl:hidden left-0 w-full max-w-2xl"
-      >
-      <img
-        :src="page.section.images.mobile"
-        :alt="page.section.title"
-        class="block lg:hidden 2xl:block 2xl:w-full 2xl:max-w-2xl"
+        :src="page.about.images.band"
+        :alt="page.about.title"
+        class="block left-0 w-full max-w-2xl"
       >
     </UPageSection>
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      id="features"
-      :description="page.features.description"
-      :features="page.features.features"
-      :ui="{
-        title: 'text-left @container relative flex',
-        description: 'text-left'
-      }"
+      id="shows"
+      :description="page.shows.description"
       class="relative overflow-hidden"
     >
-      <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
-      <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
       <template #title>
-        <MDC
-          :value="page.features.title"
-          class="*:leading-9"
-        />
-        <div class="hidden @min-[1020px]:block">
-          <UColorModeImage
-            light="/images/light/line-2.svg"
-            dark="/images/dark/line-2.svg"
-            class="absolute top-0 right-0 size-full transform scale-95 translate-x-[70%]"
-          />
-        </div>
+        <MDC :value="page.shows.headline" />
       </template>
+
+      <UContainer>
+        <UTable
+          :columns="showsTableColumns"
+          :data="showsTableData"
+        />
+      </UContainer>
     </UPageSection>
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      id="steps"
-      :description="page.steps.description"
-      class="relative overflow-hidden"
-    >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-3.svg"
-          dark="/images/dark/line-3.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
-      <template #title>
-        <MDC :value="page.steps.title" />
-      </template>
-
-      <template #features>
-        <UPageCard
-          v-for="(step, index) in page.steps.items"
-          :key="index"
-          class="group"
-          :ui="{ container: 'p-4 sm:p-4', title: 'flex items-center gap-1' }"
-        >
-          <UColorModeImage
-            v-if="step.image"
-            :light="step.image?.light"
-            :dark="step.image?.dark"
-            :alt="step.title"
-            class="size-full"
-          />
-
-          <div class="flex flex-col gap-2">
-            <span class="text-lg font-semibold">
-              {{ step.title }}
-            </span>
-            <span class="text-sm text-muted">
-              {{ step.description }}
-            </span>
-          </div>
-        </UPageCard>
-      </template>
-    </UPageSection>
-
-    <UPageSection
-      id="pricing"
+      id="patreon"
       class="mb-32 overflow-hidden"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :plans="page.pricing.plans"
+      :title="page.patreon.headline"
+      :description="page.patreon.description"
+      :plans="page.patreon.levels"
       :ui="{ title: 'text-left @container relative', description: 'text-left' }"
     >
       <template #title>
-        <MDC :value="page.pricing.title" />
-
-        <div class="hidden @min-[1120px]:block">
-          <UColorModeImage
-            light="/images/light/line-4.svg"
-            dark="/images/dark/line-4.svg"
-            class="absolute top-0 right-0 size-full transform translate-x-[60%]"
-          />
-        </div>
+        <MDC :value="page.patreon.headline" />
       </template>
 
       <UPricingPlans scale>
         <UPricingPlan
-          v-for="(plan, index) in page.pricing.plans"
+          v-for="(plan, index) in page.patreon.levels"
           :key="index"
           :title="plan.title"
           :description="plan.description"
@@ -185,44 +211,7 @@ useSeoMeta({
       </UPricingPlans>
     </UPageSection>
 
-    <UPageSection
-      id="testimonials"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-5.svg"
-          dark="/images/dark/line-5.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
-      <template #title>
-        <MDC :value="page.testimonials.title" />
-      </template>
-
-      <UContainer>
-        <UPageColumns class="xl:columns-3">
-          <UPageCard
-            v-for="(testimonial, index) in page.testimonials.items"
-            :key="index"
-            variant="subtle"
-            :description="testimonial.quote"
-            :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-          >
-            <template #footer>
-              <UUser
-                v-bind="testimonial.user"
-                size="xl"
-              />
-            </template>
-          </UPageCard>
-        </UPageColumns>
-      </UContainer>
-    </UPageSection>
-
-    <USeparator />
+    <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageCTA
       v-bind="page.cta"
@@ -231,19 +220,6 @@ useSeoMeta({
     >
       <template #title>
         <MDC :value="page.cta.title" />
-
-        <div class="@max-[1280px]:hidden">
-          <UColorModeImage
-            light="/images/light/line-6.svg"
-            dark="/images/dark/line-6.svg"
-            class="absolute left-10 -top-10 sm:top-0 h-full"
-          />
-          <UColorModeImage
-            light="/images/light/line-7.svg"
-            dark="/images/dark/line-7.svg"
-            class="absolute right-0 bottom-0 h-full"
-          />
-        </div>
       </template>
 
       <LazyStarsBg />

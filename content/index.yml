@@ -1,161 +1,200 @@
 seo:
-  title: Nuxt Landing Template
-  description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
-title: AI-Powered Developer Productivity Platform
-description: Boost your coding productivity with AI-driven insights that tell you when and how to code most efficiently.
-hero:
+  title: babename - the band
+  description: Listen to babename's music on all major streaming platforms, catch us live, and support us on Patreon.
+
+title: '[babename]{.text-primary}'
+description: Indie rock from the heart. Stream our music, catch us live, and join our community.
+
+listen:
+  headline: Listen to our [music]{.text-primary}
+  description: Available on all major streaming platforms. Find us wherever you listen to music.
   links:
-    - label: Get started
-      icon: i-lucide-arrow-right
-      trailing: true
-      color: primary
-      to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
-      target: _blank
-      size: xl
-    - label: Clone on GitHub
-      icon: i-simple-icons-github
-      size: xl
-      color: neutral
-      variant: outline
-      to: https://github.com/nuxt-ui-templates/landing
-      target: _blank
-section:
-  title: '[Revolutionize]{.text-primary} your coding experience'
-  description: Transform your development workflow with AI-powered insights and personalized productivity optimization.
+    - title: Spotify
+      icon: i-simple-icons-spotify
+    - title: Apple Music
+      icon: i-simple-icons-applemusic
+    - title: Bandcamp
+      icon: i-simple-icons-bandcamp
+    - title: YouTube
+      icon: i-simple-icons-youtube
+    - title: SoundCloud
+      icon: i-simple-icons-soundcloud
+    - title: Tidal
+      icon: i-simple-icons-tidal
+
+album:
+  headline: Our [debut album]{.text-primary} is almost here!
+  description: Out on February 27, 2026
+  emailHeader: "Sign up for notifications:"
+  emailPlaceholder: "Enter your email"
+  submitLabel: "Notify Me"
+  successToastTitle: "Success!"
+  successToastDescription: "Thanks for signing up! We'll keep you updated on new releases."
+  errorToastTitle: "Error"
+  errorToastDescription: "Something went wrong. Please try again."
+
+about:
+  title: 'About [us]{.text-primary}'
+  description: We're an indie rock band from Seattle, WA, blending heartfelt lyrics with energetic guitar-driven sound. Meet the members behind the music (left to right)
   images:
-    mobile: '/images/macbook-mobile.svg'
-    desktop: '/images/macbook.svg'
-  features:
-    - title: Optimize your focus time
-      description: Let AI identify your peak coding hours and adapt to your natural rhythm. Focus on what matters most - writing great code, while our system optimizes your productivity patterns.
-      class: border-l border-primary pl-4
-    - title: Track your best coding hours
-      description: Track when you code best with smart analytics. Get actionable insights to tackle challenging tasks during your peak performance hours.
+    band: '/images/band.jpg'
+  members:
+    - title: Alex
+      description: Drums
       class: border-l border-default pt-4 pl-4
-    - title: Improve workflow efficiency
-      description: Automate your workflow optimization from code snippets to focus management. Ship better code faster with a streamlined development process.
+    - title: Jamie 
+      description: Vocals, Guitar, Songwriting
+      class: border-l border-default pl-4
+    - title: Dylan
+      description: Vocals, Guitar
+      class: border-l border-default pt-4 pl-4
+    - title: Jessica
+      description: Bass
       class: border-l border-default pt-4 pl-4
 features:
-  title: Take control of your [productivity]{.text-primary}
-  description: Make every coding session count with smart analytics and workflow optimization.
-  features:
-    - title: AI-Powered Focus Tracking
-      description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
-      icon: i-lucide-wand-sparkles
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Distraction Alerts
-      description: Get notified when your focus drifts and bring your attention back.
-      icon: i-lucide-bell-ring
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Smart Code Snippets
-      description: Save and reuse frequently used code blocks for efficiency.
-      icon: i-lucide-code-xml
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Deep Work Mode
-      description: Block distractions and set structured coding sessions with built-in Pomodoro timers.
-      icon: i-lucide-moon
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Collaborative Insights
-      description: Sync your workflow with teammates and see when they are most productive.
-      icon: i-lucide-mouse-pointer-2
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Performance Analytics
-      description: Track your coding metrics and get insights to boost your speed and code quality.
-      icon: i-lucide-chart-line
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-steps:
-  title: Start coding smarter in [3 steps]{.text-primary}
-  description: Transform your development workflow with our AI-powered assistant.
-  items:
-    - title: Connect Your IDE
-      description: Seamlessly integrate with VS Code, JetBrains, or your preferred editor. Get started in under 2 minutes with zero configuration needed.
-      image:
-        light: '/images/light/connect.svg'
-        dark: '/images/dark/connect.svg'
-    - title: Track & Analyze
-      description: Our AI silently monitors your coding patterns to identify your peak productivity hours and potential workflow bottlenecks.
-      image:
-        light: '/images/light/optimize.svg'
-        dark: '/images/dark/optimize.svg'
-    - title: Optimize & Code Smarter
-      description: Receive personalized recommendations to enhance your coding efficiency. Watch your productivity soar with data-driven insights.
-      image:
-        light: '/images/light/track.svg'
-        dark: '/images/dark/track.svg'
-pricing:
-  title: Choose your [productivity]{.text-primary} path
-  description: Unlock AI-powered coding efficiency with our flexible plans. Whether you're a solo developer or part of a team, we have the perfect toolset to maximize your development workflow.
-  plans:
-    - title: Pro Developer
-      description: Perfect for individual developers focused on maximizing productivity.
-      price: $199
+  title: Listen to our [music]{.text-primary}
+  description: Stream babename on all major platforms. Find us wherever you listen to music.
+  
+shows:
+  headline: Catch us [live]{.text-primary}
+  description: Check out our upcoming show dates and grab your tickets. See you there!
+  list:
+    - date: 'October 29, 2025'
+      venue: The Sunset Tavern
+      location: Seattle, WA
+      ticketLink: 'https://dice.fm/event/oenlqg-remainders-boydream-babename-29th-oct-the-sunset-tavern-seattle-tickets'
+    - date: 'October 9, 2025'
+      venue: The Mountain Room
+      location: Seattle, WA
+      ticketLink: '#'
+    - date: 'September 9, 2025'
+      venue: Old Stove Gardens
+      location: Seattle, WA
+      ticketLink: '#'
+    - date: 'July 13, 2025'
+      venue: Fremont Abbey
+      location: Seattle, WA
+      ticketLink: '#'
+
+patreon:
+  headline: Support us on [Patreon]{.text-primary}
+  description: Join our community and get exclusive perks while supporting the music you love. Choose a tier that works for you.
+  levels:
+    - title: Fan Club
+      description: Join this tier to get behind-the-scenes looks and exclusive content related to our album-making process. Fans can expect regular project updates and at least once-a-month video or audio posts throughout the production phase. These will include demos heard nowhere else, live recordings, or sneak peaks into the recording studio. As songs get released, expect reflections on lyrics and the writing and recording process.
+      price: $5
+      billing_period: per month
+      billing_cycle: monthly
       features:
-        - AI productivity tracking to optimize your peak coding hours
-        - Smart distraction alerts to maintain deep focus
-        - Personal code snippet library for faster development
-        - Deep Work Mode with Pomodoro timer integration
-        - Performance analytics dashboard
-        - Priority email support
+        - Be a part of our community
+        - Behind-the-scenes content
+        - Exclusive first listens
       button:
-        label: Buy now
+        label: Join on Patreon
         color: neutral
         variant: outline
-        to: '#'
-    - title: Team Developer
-      description: For bootstrappers and indie hackers.
-      price: $199
+        to: 'https://www.patreon.com/checkout/babename?rid=25010899&slug=babename'
+        target: _blank
+        size: md
+    - title: Super Fan
+      description: In addition to all the Fan Club membership perks, you'll get exclusive first looks and listens into artistic decisions. Help us workshop an arrangement or decide between merch or album cover designs! You'll be a part of helping make the album and will be the very first to have access to tickets, merch, and the album itself!
+      price: $10
+      billing_period: per month
+      billing_cycle: monthly
+      highlight: true
       features:
-        - Everything in Pro Developer
-        - Team productivity analytics and insights
-        - Collaborative code snippet sharing
-        - Cross-team performance tracking
-        - Synchronized deep work sessions
-        - Priority team support with dedicated manager
+        - Be a part of our community
+        - Behind-the-scenes content
+        - Exclusive first listens
+        - Give feedback on artistic decisions
+        - Early access to tickets, merch, and the album itself
       button:
-        label: Buy now
-        variant: subtle
-        to: '#'
+        label: Join on Patreon
+        variant: solid
+        color: primary
+        to: 'https://www.patreon.com/checkout/babename?rid=25010943&slug=babename'
+        target: _blank
+        size: md
+    - title: "OMG like I'm your #1 fan"
+      description: At this level you're making a significant impact to our ability to record and bring this album to life! I couldn't be more grateful. You'll get all the other perks, and we'll send you a physical gift upon album release :) Folks who stay at this level for at least 6 months will get a shout-out in the liner notes if you'd like.
+      price: $30
+      billing_period: per month
+      billing_cycle: monthly
+      features:
+        - Be a part of our community
+        - Behind-the-scenes content
+        - Exclusive first listens
+        - Early access to tickets, merch, and the album itself
+        - Give feedback on artistic decisions
+        - Shout-out in album notes
+        - Gift upon album release
+      button:
+        label: Join on Patreon
+        variant: outline
+        color: neutral
+        to: 'https://www.patreon.com/checkout/babename?rid=25010989&slug=babename'
+        target: _blank
+        size: md
+        
 testimonials:
-  title: Join thousands of productive [developers]{.text-primary}
-  description: See how developers are transforming their coding workflow and achieving more with our AI-powered platform.
+  title: What people are [saying]{.text-primary}
+  description: Press coverage, reviews, and praise from music publications and fans.
   items:
-    - quote: Since using this tool, my productivity has doubled. The AI insights helped me find my perfect coding rhythm and now I ship features twice as fast.
+    - quote: babename delivers raw energy and honest songwriting that cuts through the noise. Their live shows are unmissable experiences that leave audiences wanting more.
       user:
-        name: 'Sarah Moriceau'
-        description: 'Brand Designer'
+        name: 'Indie Music Review'
+        description: 'Music Publication'
+        to: '#'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
+    - quote: A band that understands the power of connection. Their sound is fresh yet familiar, innovative yet accessible. babename is a band to watch in 2025.
       user:
-        name: 'Sébastien Chopin'
-        description:  'Lead Software Engineer'
+        name: 'The Sound Collective'
+        description: 'Online Magazine'
+        to: '#'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
+    - quote: From the first chord to the last, babename captivates. Their music blends indie sensibilities with rock authenticity, creating something truly special.
       user:
-        name: 'Benjamin Canac'
-        description:  'Senior Frontend Developer'
+        name: 'Alternative Press'
+        description: 'Music Journalism'
+        to: '#'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
+    - quote: babename is proof that guitar-driven rock is alive and well. Their debut has been on repeat since release day.
+      user:
+        name: 'The Underground'
+        description: 'Music Blog'
+        to: '#'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
+    - quote: These guys know how to put on a show. High energy, great musicianship, and genuine stage presence. Can't wait to see them again.
+      user:
+        name: 'Live Music Weekly'
+        description: 'Concert Review'
+        to: '#'
+        target: _blank
+        avatar:
+          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
 cta:
-  title: Ready to build an amazing landing page?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  title: Join the [babename]{.text-primary} journey
+  description: Stream our music, catch us live, and become part of our growing community. Let's make something amazing together.
   links:
-    - label: Start building
-      to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt'
-      target: _blank
-      trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/landing'
-      target: _blank
-      variant: subtle
-      icon: i-simple-icons-github
+    - label: Listen Now
+      to: '#music'
+      target: _self
+      trailingIcon: i-lucide-headphones
+      color: primary
+      variant: solid
+      size: lg
+    - label: See Tour Dates
+      to: '#shows'
+      target: _self
+      variant: outline
+      color: neutral
+      icon: i-lucide-calendar
+      size: lg

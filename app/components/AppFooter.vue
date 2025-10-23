@@ -1,36 +1,36 @@
 <script setup lang="ts">
 const columns = [{
-  label: 'Resources',
+  label: 'Music',
   children: [{
-    label: 'Help center'
+    label: 'Spotify'
   }, {
-    label: 'Docs'
+    label: 'Apple Music'
   }, {
-    label: 'Roadmap'
+    label: 'Bandcamp'
   }, {
-    label: 'Changelog'
+    label: 'YouTube'
   }]
 }, {
-  label: 'Features',
+  label: 'Connect',
   children: [{
-    label: 'Affiliates'
+    label: 'Tour Dates'
   }, {
-    label: 'Portal'
+    label: 'Patreon'
   }, {
-    label: 'Jobs'
+    label: 'Merch'
   }, {
-    label: 'Sponsors'
+    label: 'Contact'
   }]
 }, {
-  label: 'Company',
+  label: 'About',
   children: [{
-    label: 'About'
+    label: 'Band Info'
   }, {
-    label: 'Pricing'
+    label: 'Press Kit'
   }, {
-    label: 'Careers'
+    label: 'News'
   }, {
-    label: 'Blog'
+    label: 'FAQ'
   }]
 }]
 
@@ -63,7 +63,7 @@ function onSubmit() {
             <form @submit.prevent="onSubmit">
               <UFormField
                 name="email"
-                label="Subscribe to our newsletter"
+                label="Get updates on new music & shows"
                 size="lg"
               >
                 <UInput
@@ -89,32 +89,40 @@ function onSubmit() {
 
     <template #left>
       <p class="text-sm text-muted">
-        Built with Nuxt UI • © {{ new Date().getFullYear() }}
+        © {{ new Date().getFullYear() }} Babename • All Rights Reserved
       </p>
     </template>
 
     <template #right>
       <UButton
-        to="https://go.nuxt.com/discord"
+        to="https://instagram.com/babename"
         target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Nuxt on Discord"
+        icon="i-simple-icons-instagram"
+        aria-label="Babename on Instagram"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://go.nuxt.com/x"
+        to="https://facebook.com/babename"
+        target="_blank"
+        icon="i-simple-icons-facebook"
+        aria-label="Babename on Facebook"
+        color="neutral"
+        variant="ghost"
+      />
+      <UButton
+        to="https://x.com/babename"
         target="_blank"
         icon="i-simple-icons-x"
-        aria-label="Nuxt on X"
+        aria-label="Babename on X"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://github.com/nuxt-ui-templates/landing"
+        to="https://youtube.com/@babename"
         target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="Nuxt UI on GitHub"
+        icon="i-simple-icons-youtube"
+        aria-label="Babename on YouTube"
         color="neutral"
         variant="ghost"
       />

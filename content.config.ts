@@ -19,7 +19,7 @@ const createLinkSchema = () => z.object({
 })
 
 const createFeatureSchema = () => createBaseSchema().extend({
-  icon: z.string().editor({ input: 'icon' }),
+  icon: z.string().optional().editor({ input: 'icon' }),
   ui: z.object({
     leading: z.string().optional()
   }).editor({ hidden: true })
@@ -30,16 +30,28 @@ export const collections = {
     source: 'index.yml',
     type: 'page',
     schema: z.object({
-      hero: z.object({
-        links: z.array(createLinkSchema())
+      listen: createBaseSchema().extend({
+        headline: z.string(),
+        description: z.string(),
+        links: z.array(createFeatureSchema())
       }),
-      section: createBaseSchema().extend({
+      album: z.object({
+        headline: z.string(),
+        description: z.string(),
+        emailHeader: z.string(),
+        emailPlaceholder: z.string(),
+        submitLabel: z.string(),
+        successToastTitle: z.string(),
+        successToastDescription: z.string(),
+        errorToastTitle: z.string(),
+        errorToastDescription: z.string()
+      }),
+      about: createBaseSchema().extend({
         headline: z.string().optional(),
         images: z.object({
-          mobile: z.string().optional(),
-          desktop: z.string().optional()
+          band: z.string().optional()
         }),
-        features: z.array(
+        members: z.array(
           createBaseSchema().extend({
             icon: z.string().editor({ input: 'icon' })
           })
@@ -48,16 +60,20 @@ export const collections = {
       features: createBaseSchema().extend({
         features: z.array(createFeatureSchema())
       }),
-      steps: createBaseSchema().extend({
-        items: z.array(createFeatureSchema().extend({
-          image: z.object({
-            light: z.string().editor({ input: 'media' }),
-            dark: z.string().editor({ input: 'media' })
-          }).optional()
+      shows: z.object({
+        headline: z.string(),
+        description: z.string(),
+        list: z.array(z.object({
+          date: z.string().nonempty(),
+          venue: z.string().nonempty(),
+          location: z.string().nonempty(),
+          ticketLink: z.string().nonempty()
         }))
       }),
-      pricing: createBaseSchema().extend({
-        plans: z.array(
+      patreon: z.object({
+        headline: z.string(),
+        description: z.string(),
+        levels: z.array(
           createBaseSchema().extend({
             price: z.string().nonempty(),
             button: createLinkSchema(),

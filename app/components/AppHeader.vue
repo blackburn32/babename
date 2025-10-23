@@ -1,38 +1,61 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
-const items = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
+const items: ComputedRef<NavigationMenuItem[]> = computed(() => [{
+  label: 'Music',
+  active: activeHeadings.value.includes('music') && !activeHeadings.value.includes('shows'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#music')
 }, {
-  label: 'Pricing',
-  to: '#pricing',
-  active: activeHeadings.value.includes('pricing')
+  label: 'Shows',
+  active: activeHeadings.value.includes('shows'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#shows')
 }, {
-  label: 'Testimonials',
-  to: '#testimonials',
-  active: activeHeadings.value.includes('testimonials') && !activeHeadings.value.includes('pricing')
+  label: 'Patreon',
+  active: activeHeadings.value.includes('patreon'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#patreon')
+}, {
+  label: 'Press',
+  active: activeHeadings.value.includes('press') && !activeHeadings.value.includes('patreon'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#press')
+}, {
+  to: 'https://www.patreon.com/bePatron?u=143537464',
+  icon: 'i-tabler-brand-patreon-filled'
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials')
+    document.querySelector('#music'),
+    document.querySelector('#shows'),
+    document.querySelector('#patreon'),
+    document.querySelector('#press')
   ].filter(Boolean) as Element[])
 })
+
+const handleSmoothScroll = (event: Event, targetId: string) => {
+  event.preventDefault()
+  const target = document.querySelector(targetId)
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 </script>
 
 <template>
-  <UHeader>
+  <UHeader class="h-20">
     <template #left>
       <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
+        <div class="flex flex-col space-y-0">
+          <div class="text-4xl font-logo">
+            babename
+          </div>
+          <div class="font-logo leading-none">
+            THE BAND
+          </div>
+        </div>
       </NuxtLink>
-
-      <TemplateMenu />
     </template>
 
     <template #right>
@@ -41,14 +64,6 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         variant="link"
         class="hidden lg:block"
       />
-
-      <UButton
-        label="Download App"
-        variant="subtle"
-        class="hidden lg:block"
-      />
-
-      <UColorModeButton />
     </template>
 
     <template #body>
@@ -56,12 +71,6 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         :items="items"
         orientation="vertical"
         class="-mx-2.5"
-      />
-      <UButton
-        class="mt-4"
-        label="Download App"
-        variant="subtle"
-        block
       />
     </template>
   </UHeader>
