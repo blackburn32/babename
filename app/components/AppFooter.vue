@@ -13,45 +13,23 @@ const columns = [{
 }, {
   label: 'Connect',
   children: [{
-    label: 'Tour Dates'
+    label: 'Shows',
+    to: '#shows'
   }, {
-    label: 'Patreon'
-  }, {
-    label: 'Merch'
-  }, {
-    label: 'Contact'
+    label: 'Patreon',
+    to: 'https://www.patreon.com/c/babename/posts'
   }]
 }, {
   label: 'About',
   children: [{
-    label: 'Band Info'
-  }, {
-    label: 'Press Kit'
-  }, {
-    label: 'News'
-  }, {
-    label: 'FAQ'
+    label: 'Band Info',
+    to: '#about'
   }]
 }]
-
-const toast = useToast()
-
-const email = ref('')
-const loading = ref(false)
-
-function onSubmit() {
-  loading.value = true
-
-  toast.add({
-    title: 'Subscribed!',
-    description: 'You\'ve been subscribed to our newsletter.'
-  })
-}
 </script>
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
     class="h-px"
   />
 
@@ -60,28 +38,13 @@ function onSubmit() {
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
-            <form @submit.prevent="onSubmit">
-              <UFormField
-                name="email"
-                label="Get updates on new music & shows"
-                size="lg"
-              >
-                <UInput
-                  v-model="email"
-                  type="email"
-                  class="w-full"
-                  placeholder="Enter your email"
-                >
-                  <template #trailing>
-                    <UButton
-                      type="submit"
-                      size="xs"
-                      label="Subscribe"
-                    />
-                  </template>
-                </UInput>
-              </UFormField>
-            </form>
+            <EmailSignupForm />
+            <div class="text-sm font-semibold mt-6">
+              Contact:
+            </div>
+            <ULink to="mailto:booking@babenametheband.com" class="hover:underline text-sm">
+              booking@babenametheband.com
+            </ULink>
           </template>
         </UFooterColumns>
       </UContainer>
@@ -95,34 +58,10 @@ function onSubmit() {
 
     <template #right>
       <UButton
-        to="https://instagram.com/babename"
+        to="https://www.patreon.com/c/babename/posts"
         target="_blank"
-        icon="i-simple-icons-instagram"
-        aria-label="Babename on Instagram"
-        color="neutral"
-        variant="ghost"
-      />
-      <UButton
-        to="https://facebook.com/babename"
-        target="_blank"
-        icon="i-simple-icons-facebook"
-        aria-label="Babename on Facebook"
-        color="neutral"
-        variant="ghost"
-      />
-      <UButton
-        to="https://x.com/babename"
-        target="_blank"
-        icon="i-simple-icons-x"
-        aria-label="Babename on X"
-        color="neutral"
-        variant="ghost"
-      />
-      <UButton
-        to="https://youtube.com/@babename"
-        target="_blank"
-        icon="i-simple-icons-youtube"
-        aria-label="Babename on YouTube"
+        icon="i-simple-icons-patreon"
+        aria-label="Babename on Patreon"
         color="neutral"
         variant="ghost"
       />

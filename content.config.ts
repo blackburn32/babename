@@ -37,9 +37,11 @@ export const collections = {
       }),
       album: z.object({
         headline: z.string(),
-        description: z.string(),
-        emailHeader: z.string(),
-        emailPlaceholder: z.string(),
+        description: z.string()
+      }),
+      email: z.object({
+        header: z.string(),
+        placeholder: z.string(),
         submitLabel: z.string(),
         successToastTitle: z.string(),
         successToastDescription: z.string(),

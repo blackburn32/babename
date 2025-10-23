@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     '@nuxt/fonts'
   ],
 
+  fonts: {
+    providers: {
+      mayflower: '~/providers/mayflower'
+    }
+  },
+
   devtools: {
     enabled: true
   },

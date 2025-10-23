@@ -5,7 +5,7 @@ const emit = defineEmits<{
   submit: [email: string]
 }>()
 
-const { data: page } = await useAsyncData('content', () => queryCollection('content').first())
+const page = await usePageContent()
 
 const emailFormSchema = z.object({
   email: z.string().email('Please enter a valid email address')
@@ -28,16 +28,16 @@ async function handleEmailSubmit() {
     emailForm.email = ''
     emit('submit', submittedEmail)
     toast.add({
-      title: page.value?.album.successToastTitle,
-      description: page.value?.album.successToastDescription,
+      title: page.value?.email.successToastTitle,
+      description: page.value?.email.successToastDescription,
       icon: 'i-lucide-check-circle',
       color: 'primary'
     })
   } catch (error) {
     console.error('Error submitting email:', error)
     toast.add({
-      title: page.value?.album.errorToastTitle,
-      description: page.value?.album.errorToastDescription,
+      title: page.value?.email.errorToastTitle,
+      description: page.value?.email.errorToastDescription,
       icon: 'i-lucide-circle-x',
       color: 'error'
     })
@@ -54,22 +54,24 @@ async function handleEmailSubmit() {
     :state="emailForm"
     @submit="handleEmailSubmit"
   >
-    <UFormField name="email" :label="page.album.emailHeader">
+    <UFormField name="email" :label="page.email.header">
       <UInput
         v-model="emailForm.email"
-        trailing-icon="i-lucide-at-sign"
-        :placeholder="page.album.emailPlaceholder"
+        :placeholder="page.email.placeholder"
         size="md"
         type="email"
-      />
+        class="w-full"
+      >
+        <template #trailing>
+          <UButton
+            type="submit"
+            size="xs"
+            :label="page.email.submitLabel"
+            :loading="isSubmitting"
+            :disabled="isSubmitting"
+          />
+        </template>
+      </UInput>
     </UFormField>
-    <UButton
-      class="w-fit mt-2"
-      :label="page.album.submitLabel"
-      type="submit"
-      :loading="isSubmitting"
-      :disabled="isSubmitting"
-      variant="outline"
-    />
   </UForm>
 </template>

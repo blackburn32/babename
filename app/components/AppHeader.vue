@@ -6,8 +6,12 @@ const { activeHeadings, updateHeadings } = useScrollspy()
 
 const items: ComputedRef<NavigationMenuItem[]> = computed(() => [{
   label: 'Music',
-  active: activeHeadings.value.includes('music') && !activeHeadings.value.includes('shows'),
-  onSelect: (event: Event) => handleSmoothScroll(event, '#music')
+  active: activeHeadings.value.includes('listen') && !activeHeadings.value.includes('about'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#listen')
+}, {
+  label: 'About',
+  active: activeHeadings.value.includes('about'),
+  onSelect: (event: Event) => handleSmoothScroll(event, '#about')
 }, {
   label: 'Shows',
   active: activeHeadings.value.includes('shows'),
@@ -17,20 +21,16 @@ const items: ComputedRef<NavigationMenuItem[]> = computed(() => [{
   active: activeHeadings.value.includes('patreon'),
   onSelect: (event: Event) => handleSmoothScroll(event, '#patreon')
 }, {
-  label: 'Press',
-  active: activeHeadings.value.includes('press') && !activeHeadings.value.includes('patreon'),
-  onSelect: (event: Event) => handleSmoothScroll(event, '#press')
-}, {
   to: 'https://www.patreon.com/bePatron?u=143537464',
   icon: 'i-tabler-brand-patreon-filled'
 }])
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
-    document.querySelector('#music'),
+    document.querySelector('#listen'),
+    document.querySelector('#about'),
     document.querySelector('#shows'),
     document.querySelector('#patreon'),
-    document.querySelector('#press')
   ].filter(Boolean) as Element[])
 })
 

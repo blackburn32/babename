@@ -25,9 +25,11 @@ listen:
 album:
   headline: Our [debut album]{.text-primary} is almost here!
   description: Out on February 27, 2026
-  emailHeader: "Sign up for notifications:"
-  emailPlaceholder: "Enter your email"
-  submitLabel: "Notify Me"
+
+email:
+  header: "Sign up for notifications:"
+  placeholder: "Enter your email"
+  submitLabel: "Subscribe"
   successToastTitle: "Success!"
   successToastDescription: "Thanks for signing up! We'll keep you updated on new releases."
   errorToastTitle: "Error"
@@ -37,7 +39,7 @@ about:
   title: 'About [us]{.text-primary}'
   description: We're an indie rock band from Seattle, WA, blending heartfelt lyrics with energetic guitar-driven sound. Meet the members behind the music (left to right)
   images:
-    band: '/images/band.jpg'
+    band: 'https://ik.imagekit.io/alnazmrug/babename/band.jpg?updatedAt=1761250166563'
   members:
     - title: Alex
       description: Drums
@@ -51,10 +53,7 @@ about:
     - title: Jessica
       description: Bass
       class: border-l border-default pt-4 pl-4
-features:
-  title: Listen to our [music]{.text-primary}
-  description: Stream babename on all major platforms. Find us wherever you listen to music.
-  
+
 shows:
   headline: Catch us [live]{.text-primary}
   description: Check out our upcoming show dates and grab your tickets. See you there!
@@ -78,7 +77,7 @@ shows:
 
 patreon:
   headline: Support us on [Patreon]{.text-primary}
-  description: Join our community and get exclusive perks while supporting the music you love. Choose a tier that works for you.
+  description: Join our community and get exclusive perks while supporting the music you love! Choose a tier that works for you.
   levels:
     - title: Fan Club
       description: Join this tier to get behind-the-scenes looks and exclusive content related to our album-making process. Fans can expect regular project updates and at least once-a-month video or audio posts throughout the production phase. These will include demos heard nowhere else, live recordings, or sneak peaks into the recording studio. As songs get released, expect reflections on lyrics and the writing and recording process.
@@ -135,7 +134,7 @@ patreon:
         to: 'https://www.patreon.com/checkout/babename?rid=25010989&slug=babename'
         target: _blank
         size: md
-        
+
 testimonials:
   title: What people are [saying]{.text-primary}
   description: Press coverage, reviews, and praise from music publications and fans.
@@ -184,14 +183,14 @@ cta:
   title: Join the [babename]{.text-primary} journey
   description: Stream our music, catch us live, and become part of our growing community. Let's make something amazing together.
   links:
-    - label: Listen Now
-      to: '#music'
+    - label: Follow Us
+      to: 'https://www.patreon.com/c/babename/posts'
       target: _self
-      trailingIcon: i-lucide-headphones
+      trailingIcon: i-simple-icons-patreon
       color: primary
       variant: solid
       size: lg
-    - label: See Tour Dates
+    - label: Show Dates
       to: '#shows'
       target: _self
       variant: outline

@@ -1,0 +1,78 @@
+<script setup lang="ts">
+import { h, resolveComponent } from 'vue'
+import type { TableColumn } from '@nuxt/ui'
+
+const page = await usePageContent()
+
+type ShowRow = {
+  date: string
+  venue: string
+  isPast: boolean
+  ticketLink: string
+}
+
+const showsTableData = computed<ShowRow[]>(() => {
+  if (!page.value) {
+    return []
+  }
+  return page.value.shows.list.map((show) => {
+    const showDate = new Date(show.date)
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const isPast = showDate < today
+
+    return {
+      date: show.date,
+      venue: `${show.venue}, ${show.location}`,
+      isPast,
+      ticketLink: show.ticketLink
+    }
+  })
+})
+
+const showsTableColumns: TableColumn<ShowRow>[] = [
+  {
+    accessorKey: 'date',
+    header: 'Date'
+  },
+  {
+    accessorKey: 'venue',
+    header: 'Venue'
+  },
+  {
+    id: 'tickets',
+    header: 'Tickets',
+    cell: ({ row }) => {
+      if (row.original.isPast) {
+        return h('span', { class: 'text-muted' }, 'Past')
+      }
+      return h(resolveComponent('UButton'), {
+        to: row.original.ticketLink,
+        target: '_blank',
+        size: 'sm',
+        variant: 'outline'
+      }, () => 'Get Tickets')
+    }
+  }
+]
+</script>
+
+<template>
+  <UPageSection
+    v-if="page"
+    id="shows"
+    :description="page.shows.description"
+    class="relative overflow-hidden"
+  >
+    <template #title>
+      <MDC :value="page.shows.headline" />
+    </template>
+
+    <UContainer>
+      <UTable
+        :columns="showsTableColumns"
+        :data="showsTableData"
+      />
+    </UContainer>
+  </UPageSection>
+</template>
