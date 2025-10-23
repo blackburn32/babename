@@ -21,6 +21,7 @@ const page = await usePageContent()
       />
     </template>
     <iframe
+      title="Spotify Player"
       data-testid="embed-iframe"
       style="border-radius:12px"
       src="https://open.spotify.com/embed/album/5WulAOx9ilWy1h8UGZ1gkI?utm_source=generator&theme=0"

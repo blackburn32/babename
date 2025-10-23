@@ -8,10 +8,11 @@ const page = await usePageContent()
     class="relative"
   >
     <div class="block w-full">
-      <img
+      <NuxtImg
         src="https://ik.imagekit.io/alnazmrug/babename/hero.jpg?updatedAt=1761250159137"
         class="pointer-events-none left-0 top-0 object-cover w-full max-h-[100vh]"
-      >
+        alt="babename"
+      />
     </div>
 
     <UPageSection

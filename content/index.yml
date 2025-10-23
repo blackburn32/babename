@@ -135,50 +135,6 @@ patreon:
         target: _blank
         size: md
 
-testimonials:
-  title: What people are [saying]{.text-primary}
-  description: Press coverage, reviews, and praise from music publications and fans.
-  items:
-    - quote: babename delivers raw energy and honest songwriting that cuts through the noise. Their live shows are unmissable experiences that leave audiences wanting more.
-      user:
-        name: 'Indie Music Review'
-        description: 'Music Publication'
-        to: '#'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: A band that understands the power of connection. Their sound is fresh yet familiar, innovative yet accessible. babename is a band to watch in 2025.
-      user:
-        name: 'The Sound Collective'
-        description: 'Online Magazine'
-        to: '#'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: From the first chord to the last, babename captivates. Their music blends indie sensibilities with rock authenticity, creating something truly special.
-      user:
-        name: 'Alternative Press'
-        description: 'Music Journalism'
-        to: '#'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
-    - quote: babename is proof that guitar-driven rock is alive and well. Their debut has been on repeat since release day.
-      user:
-        name: 'The Underground'
-        description: 'Music Blog'
-        to: '#'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: These guys know how to put on a show. High energy, great musicianship, and genuine stage presence. Can't wait to see them again.
-      user:
-        name: 'Live Music Weekly'
-        description: 'Concert Review'
-        to: '#'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
 cta:
   title: Join the [babename]{.text-primary} journey
   description: Stream our music, catch us live, and become part of our growing community. Let's make something amazing together.

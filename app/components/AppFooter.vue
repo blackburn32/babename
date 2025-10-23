@@ -58,7 +58,7 @@ const columns = [{
 
     <template #left>
       <p class="text-sm text-muted">
-        © {{ new Date().getFullYear() }} Babename • All Rights Reserved
+        © {{ new Date().getFullYear() }} babename the band • All Rights Reserved
       </p>
     </template>
 
