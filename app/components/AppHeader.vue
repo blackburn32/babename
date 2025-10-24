@@ -36,12 +36,15 @@ const handleSmoothScroll = (event: Event, targetId: string) => {
   const target = document.querySelector(targetId)
   if (target) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    slideover.value = false
   }
 }
+
+const slideover = ref(false)
 </script>
 
 <template>
-  <UHeader class="h-20">
+  <UHeader class="h-20" mode="slideover" v-model:open="slideover">
     <template #left>
       <NuxtLink to="/">
         <div class="flex flex-col space-y-0">
