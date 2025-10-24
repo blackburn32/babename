@@ -59,9 +59,6 @@ export const collections = {
           })
         )
       }),
-      features: createBaseSchema().extend({
-        features: z.array(createFeatureSchema())
-      }),
       shows: z.object({
         headline: z.string(),
         description: z.string(),
@@ -85,22 +82,6 @@ export const collections = {
             billing_cycle: z.string().nonempty()
           })
         )
-      }),
-      testimonials: createBaseSchema().extend({
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              avatar: z.object({
-                src: z.string().editor({ input: 'media' }),
-                alt: z.string().optional()
-              }),
-              target: createEnum(['_blank', '_self'])
-            })
-          }))
       }),
       cta: createBaseSchema().extend({
         links: z.array(createLinkSchema())
