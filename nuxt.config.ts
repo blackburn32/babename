@@ -20,6 +20,12 @@ export default defineNuxtConfig({
     }
   },
 
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
+
   mdc: {
     highlight: {
       noApiRoute: false
