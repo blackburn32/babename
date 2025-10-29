@@ -30,6 +30,11 @@ export const collections = {
     source: 'index.yml',
     type: 'page',
     schema: z.object({
+      hero: createBaseSchema().extend({
+        backgroundImage: z.string().optional().editor({ input: 'image' }),
+        headline: z.string(),
+        description: z.string()
+      }),
       listen: createBaseSchema().extend({
         headline: z.string(),
         description: z.string(),

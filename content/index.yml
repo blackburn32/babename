@@ -5,6 +5,11 @@ seo:
 title: '[babename]{.text-primary}'
 description: Indie rock from the heart. Stream our music, catch us live, and join our community.
 
+hero:
+  headline: Highlights
+  description: coming 2.27.26
+  backgroundImage: https://ik.imagekit.io/alnazmrug/babename/hero.jpg?updatedAt=1761250159137
+
 listen:
   headline: Listen to our [music]{.text-primary}
   description: Available on all major streaming platforms. Find us wherever you listen to music.
