@@ -83,6 +83,15 @@ shows:
 patreon:
   headline: Support us on [Patreon]{.text-primary}
   description: Join our community and get exclusive perks while supporting the music you love! Choose a tier that works for you.
+  free: Just looking to stay up to date?
+  links:
+    - label: Follow us for free!
+      to: 'https://www.patreon.com/c/babename/posts'
+      target: _self
+      icon: i-simple-icons-patreon
+      color: primary
+      variant: solid
+      size: lg
   levels:
     - title: Fan Club
       description: Join this tier to get behind-the-scenes looks and exclusive content related to our album-making process. Fans can expect regular project updates and at least once-a-month video or audio posts throughout the production phase. These will include demos heard nowhere else, live recordings, or sneak peaks into the recording studio. As songs get released, expect reflections on lyrics and the writing and recording process.
@@ -94,7 +103,7 @@ patreon:
         - Behind-the-scenes content
         - Exclusive first listens
       button:
-        label: Join on Patreon
+        label: Support us
         color: neutral
         variant: outline
         to: 'https://www.patreon.com/checkout/babename?rid=25010899&slug=babename'
@@ -113,7 +122,7 @@ patreon:
         - Give feedback on artistic decisions
         - Early access to tickets, merch, and the album itself
       button:
-        label: Join on Patreon
+        label: Support us
         variant: solid
         color: primary
         to: 'https://www.patreon.com/checkout/babename?rid=25010943&slug=babename'
@@ -133,7 +142,7 @@ patreon:
         - Shout-out in album notes
         - Gift upon album release
       button:
-        label: Join on Patreon
+        label: Support us
         variant: outline
         color: neutral
         to: 'https://www.patreon.com/checkout/babename?rid=25010989&slug=babename'

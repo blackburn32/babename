@@ -77,6 +77,8 @@ export const collections = {
       patreon: z.object({
         headline: z.string(),
         description: z.string(),
+        free: z.string(),
+        links: z.array(createLinkSchema()),
         levels: z.array(
           createBaseSchema().extend({
             price: z.string().nonempty(),

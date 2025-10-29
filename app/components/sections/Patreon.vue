@@ -32,5 +32,21 @@ const page = await usePageContent()
         :button="plan.button"
       />
     </UPricingPlans>
+    <div class="flex flex-row items-center mt-4 gap-4">
+      <div class="text-base sm:text-lg text-muted text-balance">
+        {{ page.patreon.free }}
+      </div>
+      <UButton
+        v-for="(link, index) in page.patreon.links"
+        :key="index"
+        :label="link.label"
+        :icon="link.icon"
+        :to="link.to"
+        :target="link.target"
+        :aria-label="link.label"
+        :size="link.size"
+        :variant="link.variant"
+        />
+    </div>
   </UPageSection>
 </template>
