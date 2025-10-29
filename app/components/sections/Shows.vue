@@ -30,7 +30,10 @@ const showsTableData = computed<ShowRow[]>(() => {
   })
 })
 
-const showsTableColumns: TableColumn<ShowRow>[] = [
+const upcomingShows = computed(() => showsTableData.value.filter(show => !show.isPast))
+const pastShows = computed(() => showsTableData.value.filter(show => show.isPast))
+
+const upcomingShowsColumns: TableColumn<ShowRow>[] = [
   {
     accessorKey: 'date',
     header: 'Date'
@@ -43,9 +46,6 @@ const showsTableColumns: TableColumn<ShowRow>[] = [
     id: 'tickets',
     header: 'Tickets',
     cell: ({ row }) => {
-      if (row.original.isPast) {
-        return h('span', { class: 'text-muted' }, 'Past')
-      }
       return h(resolveComponent('UButton'), {
         to: row.original.ticketLink,
         target: '_blank',
@@ -54,6 +54,22 @@ const showsTableColumns: TableColumn<ShowRow>[] = [
       }, () => 'Get Tickets')
     }
   }
+]
+
+const pastShowsColumns: TableColumn<ShowRow>[] = [
+  {
+    accessorKey: 'date',
+    header: 'Date'
+  },
+  {
+    accessorKey: 'venue',
+    header: 'Venue'
+  }
+]
+
+const tabs = [
+  { label: 'Upcoming', slot: 'upcoming' },
+  { label: 'Past', slot: 'past' }
 ]
 </script>
 
@@ -69,10 +85,20 @@ const showsTableColumns: TableColumn<ShowRow>[] = [
     </template>
 
     <UContainer>
-      <UTable
-        :columns="showsTableColumns"
-        :data="showsTableData"
-      />
+      <UTabs :items="tabs">
+        <template #upcoming>
+          <UTable
+            :columns="upcomingShowsColumns"
+            :data="upcomingShows"
+          />
+        </template>
+        <template #past>
+          <UTable
+            :columns="pastShowsColumns"
+            :data="pastShows"
+          />
+        </template>
+      </UTabs>
     </UContainer>
   </UPageSection>
 </template>
