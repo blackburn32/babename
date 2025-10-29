@@ -46,7 +46,7 @@ const page = await usePageContent()
         :aria-label="link.label"
         :size="link.size"
         :variant="link.variant"
-        />
+      />
     </div>
   </UPageSection>
 </template>

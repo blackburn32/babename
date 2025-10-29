@@ -44,7 +44,11 @@ const slideover = ref(false)
 </script>
 
 <template>
-  <UHeader class="h-20" mode="slideover" v-model:open="slideover">
+  <UHeader
+    v-model:open="slideover"
+    class="h-20"
+    mode="slideover"
+  >
     <template #left>
       <NuxtLink to="/">
         <div class="flex flex-col space-y-0">
