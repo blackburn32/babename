@@ -1,0 +1,40 @@
+seo:
+  title: babename - Electronic Press Kit
+  description: Official Electronic Press Kit for babename - indie rock band from Seattle, WA. Press photos, music, bio, and contact information.
+  ogImage: https://ik.imagekit.io/alnazmrug/babename/hero.jpg?updatedAt=1761250159137
+
+pressPhotos:
+  headline: Press [Photos]{.text-primary}
+  description: High-resolution press photos available for download. Please credit 'babename' in all publications.
+  images:
+    - url: https://ik.imagekit.io/alnazmrug/babename/stairs2.jpg?updatedAt=1761779930775
+      alt: babename band photo 1
+    - url: https://ik.imagekit.io/alnazmrug/babename/far.jpg?updatedAt=1761779930821
+      alt: babename band photo 2
+    - url: https://ik.imagekit.io/alnazmrug/babename/stairs.jpg?updatedAt=1761779931149
+      alt: babename band photo 3
+
+music:
+  headline: Our [Music]{.text-primary}
+  description: Check out our debut album before it's released! Stream "Highlights" on SoundCloud.
+  embedCode: '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2105432435%3Fsecret_token%3Ds-RN5vb2FoMtH&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/babename_theband" title="babename" target="_blank" style="color: #cccccc; text-decoration: none;">babename</a> · <a href="https://soundcloud.com/babename_theband/sets/highlights/s-RN5vb2FoMtH" title="Highlights" target="_blank" style="color: #cccccc; text-decoration: none;">Highlights</a></div>'
+
+bio:
+  headline: About [Us]{.text-primary}
+  content: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+
+    Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+
+    Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur at vero eos et accusamus et iusto odio dignissimos ducimus.
+
+    Qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+contact:
+  headline: Contact [Information]{.text-primary}
+  bookingEmail: booking@babenametheband.com
+  pressEmail: press@babenametheband.com

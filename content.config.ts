@@ -94,5 +94,39 @@ export const collections = {
         links: z.array(createLinkSchema())
       })
     })
+  }),
+  epk: defineCollection({
+    source: 'epk.yml',
+    type: 'page',
+    schema: z.object({
+      seo: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        ogImage: z.string().optional().editor({ input: 'image' })
+      }),
+      pressPhotos: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        images: z.array(z.object({
+          url: z.string().nonempty().editor({ input: 'image' }),
+          alt: z.string().nonempty(),
+          caption: z.string().optional()
+        }))
+      }),
+      music: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        embedCode: z.string().nonempty()
+      }),
+      bio: z.object({
+        headline: z.string().nonempty(),
+        content: z.string().nonempty()
+      }),
+      contact: z.object({
+        headline: z.string().nonempty(),
+        bookingEmail: z.string().email(),
+        pressEmail: z.string().email()
+      })
+    })
   })
 }
