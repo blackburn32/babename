@@ -24,6 +24,18 @@ useSeoMeta({
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
+    <SectionsShows
+      :default-tab="'past'"
+      :headline="page?.shows?.headline"
+      :description="page?.shows?.description"
+    />
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
+    <SectionsEpkSocials />
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
     <SectionsEpkContact />
   </div>
 </template>

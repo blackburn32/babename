@@ -126,6 +126,15 @@ export const collections = {
         headline: z.string().nonempty(),
         bookingEmail: z.string().email(),
         pressEmail: z.string().email()
+      }),
+      shows: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty()
+      }),
+      socials: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
       })
     })
   })

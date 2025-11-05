@@ -63,6 +63,10 @@ shows:
   headline: Catch us [live]{.text-primary}
   description: Check out our upcoming show dates and grab your tickets. See you there!
   list:
+    - date: 'December 6, 2025'
+      venue: Cocoa Legato
+      location: Seattle, WA
+      ticketLink: 'https://tickets.venuepilot.com/e/babename-lauren-fernandez-2025-12-06-cocoa-legato-seattle-001453'
     - date: 'October 29, 2025'
       venue: The Sunset Tavern
       location: Seattle, WA
@@ -79,7 +83,6 @@ shows:
       venue: Fremont Abbey
       location: Seattle, WA
       ticketLink: '#'
-
 patreon:
   headline: Support us on [Patreon]{.text-primary}
   description: Join our community and get exclusive perks while supporting the music you love! Choose a tier that works for you.
@@ -153,13 +156,20 @@ cta:
   title: Join the [babename]{.text-primary} journey
   description: Stream our music, catch us live, and become part of our growing community. Let's make something amazing together.
   links:
-    - label: Follow Us
+    - label: Follow on Patreon
       to: 'https://www.patreon.com/c/babename/posts'
       target: _self
       trailingIcon: i-simple-icons-patreon
       color: primary
       variant: solid
       size: lg
+    - label: Follow on Bandcamp
+      to: https://babenametheband.bandcamp.com/
+      icon: i-simple-icons-bandcamp
+      size: xl
+      target: _blank
+      color: primary
+      variant: outline
     - label: Show Dates
       to: '#shows'
       target: _self

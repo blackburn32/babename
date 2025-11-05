@@ -38,3 +38,33 @@ contact:
   headline: Contact [Information]{.text-primary}
   bookingEmail: booking@babenametheband.com
   pressEmail: press@babenametheband.com
+
+shows:
+  headline: Where have we [played]{.text-primary}?
+  description: Check out our past shows, and our upcoming schedule!
+
+socials:
+  headline: Connect with [Us]{.text-primary}
+  description: Follow us on social media and streaming platforms.
+  links:
+    - label: Instagram
+      to: https://www.instagram.com/babename_theband
+      icon: i-simple-icons-instagram
+      size: xl
+      target: _blank
+      color: primary
+      variant: outline
+    - label: Patreon
+      to: https://www.patreon.com/babename
+      icon: i-simple-icons-patreon
+      size: xl
+      target: _blank
+      color: primary
+      variant: outline
+    - label: Bandcamp
+      to: https://babenametheband.bandcamp.com/
+      icon: i-simple-icons-bandcamp
+      size: xl
+      target: _blank
+      color: primary
+      variant: outline

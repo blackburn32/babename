@@ -2,6 +2,14 @@
 import { h, resolveComponent } from 'vue'
 import type { TableColumn } from '@nuxt/ui'
 
+const props = withDefaults(defineProps<{
+  defaultTab?: 'upcoming' | 'past'
+  headline?: string
+  description?: string
+}>(), {
+  defaultTab: 'upcoming'
+})
+
 const page = await usePageContent()
 
 type ShowRow = {
@@ -68,8 +76,8 @@ const pastShowsColumns: TableColumn<ShowRow>[] = [
 ]
 
 const tabs = [
-  { label: 'Upcoming', slot: 'upcoming' },
-  { label: 'Past', slot: 'past' }
+  { label: 'Upcoming', slot: 'upcoming', value: 'upcoming' },
+  { label: 'Past', slot: 'past', value: 'past' }
 ]
 </script>
 
@@ -77,15 +85,15 @@ const tabs = [
   <UPageSection
     v-if="page"
     id="shows"
-    :description="page.shows.description"
+    :description="props.description || page.shows.description"
     class="relative overflow-hidden"
   >
     <template #title>
-      <MDC :value="page.shows.headline" />
+      <MDC :value="props.headline || page.shows.headline" />
     </template>
 
     <UContainer>
-      <UTabs :items="tabs">
+      <UTabs :items="tabs" :default-value="props.defaultTab">
         <template #upcoming>
           <UTable
             :columns="upcomingShowsColumns"

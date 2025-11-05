@@ -2,6 +2,7 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const nuxtApp = useNuxtApp()
+const route = useRoute()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
 const items: ComputedRef<NavigationMenuItem[]> = computed(() => [{
@@ -31,12 +32,17 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   ].filter(Boolean) as Element[])
 })
 
-const handleSmoothScroll = (event: Event, targetId: string) => {
+const handleSmoothScroll = async (event: Event, targetId: string) => {
   event.preventDefault()
-  const target = document.querySelector(targetId)
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    slideover.value = false
+  slideover.value = false
+
+  if (route.path !== '/') {
+    await navigateTo({ path: '/', hash: targetId })
+  } else {
+    const target = document.querySelector(targetId)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 }
 
