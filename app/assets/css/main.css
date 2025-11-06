@@ -3,7 +3,15 @@
 
 @source "../../../content/**/*";
 
-@theme {
+@theme static {
   --font-sans: 'Public Sans', sans-serif;
   --font-logo: 'MayflowerAntique', sans-serif;
+}
+
+:root {
+  --ui-bg: var(--ui-color-neutral-50);
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
 }

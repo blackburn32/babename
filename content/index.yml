@@ -166,7 +166,7 @@ cta:
     - label: Follow on Bandcamp
       to: https://babenametheband.bandcamp.com/
       icon: i-simple-icons-bandcamp
-      size: xl
+      size: lg
       target: _blank
       color: primary
       variant: outline
