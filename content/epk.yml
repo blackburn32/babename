@@ -8,11 +8,21 @@ pressPhotos:
   description: High-resolution press photos available for download. Please credit 'babename' in all publications.
   images:
     - url: https://ik.imagekit.io/alnazmrug/babename/stairs2.jpg?updatedAt=1761779930775
-      alt: babename band photo 1
+      alt: babename on the stairs
     - url: https://ik.imagekit.io/alnazmrug/babename/far.jpg?updatedAt=1761779930821
-      alt: babename band photo 2
+      alt: babename band photo
     - url: https://ik.imagekit.io/alnazmrug/babename/stairs.jpg?updatedAt=1761779931149
-      alt: babename band photo 3
+      alt: babename on the stairs again
+    - url: https://ik.imagekit.io/alnazmrug/babename/jamie1.JPEG?updatedAt=1762972642540
+      alt: Jamie headshot
+    - url: https://ik.imagekit.io/alnazmrug/babename/stairs3.jpg?updatedAt=1762974084831
+      alt: babename on the stairs once more
+    - url: https://ik.imagekit.io/alnazmrug/babename/jamie2.JPEG?updatedAt=1762972643012
+      alt: Jamie with a crown
+    - url: https://ik.imagekit.io/alnazmrug/babename/jamie4.jpg?updatedAt=1762972643182
+      alt: Jamie by a tree
+    - url: https://ik.imagekit.io/alnazmrug/babename/jamie3.jpg?updatedAt=1762974178804
+      alt: Jamie with an umbrella
 
 music:
   headline: Our [Music]{.text-primary}
@@ -80,7 +90,7 @@ bio:
     new every day we exist. If this record can be a salve for even one queer, trans, or questioning
     kid… if it gives someone permission to love and embrace who they are, then everything I’ve put
     into this was worth it.”
-    
+
     Still early in their career, Averley approaches their art with gratitude and curiosity. Each deeper
     step - writing, recording, performing - has returned meaning tenfold. “My heart lives very much
     on my sleeve, which is what feels sincere to me, and I think matches my desire to make art that

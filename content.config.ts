@@ -64,6 +64,10 @@ export const collections = {
           })
         )
       }),
+      bio: z.object({
+        headline: z.string().nonempty(),
+        content: z.string().nonempty()
+      }),
       shows: z.object({
         headline: z.string(),
         description: z.string(),

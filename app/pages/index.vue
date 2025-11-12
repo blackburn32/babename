@@ -23,6 +23,10 @@ useSeoMeta({
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
+    <SectionsBio />
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
     <SectionsShows />
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
