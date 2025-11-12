@@ -49,5 +49,11 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  image: {
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/alnazmrug/'
+    }
   }
 })

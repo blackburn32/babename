@@ -93,7 +93,10 @@ const tabs = [
     </template>
 
     <UContainer>
-      <UTabs :items="tabs" :default-value="props.defaultTab">
+      <UTabs
+        :items="tabs"
+        :default-value="props.defaultTab"
+      >
         <template #upcoming>
           <UTable
             :columns="upcomingShowsColumns"
