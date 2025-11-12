@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const page = await usePageContent()
+const appConfig = useAppConfig()
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
@@ -11,30 +12,38 @@ useSeoMeta({
 
 <template>
   <div>
-    <SectionsHero />
+    <HeroImage />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+    <template v-if="appConfig.comingSoonMode">
+      <SectionsComingSoon />
+    </template>
 
-    <SectionsListen />
+    <template v-else>
+      <SectionsHero />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+      <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <SectionsAbout />
+      <SectionsListen />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+      <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <SectionsBio />
+      <SectionsAbout />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+      <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <SectionsShows />
+      <SectionsBio />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+      <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <SectionsPatreon />
+      <SectionsShows />
 
-    <USeparator :ui="{ border: 'border-primary/30' }" />
+      <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <SectionsCTA />
+      <SectionsPatreon />
+
+      <USeparator :ui="{ border: 'border-primary/30' }" />
+
+      <SectionsCTA />
+    </template>
   </div>
 </template>
