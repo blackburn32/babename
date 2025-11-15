@@ -21,16 +21,12 @@ const page = await usePageContent()
       />
     </template>
     <iframe
-      title="Spotify Player"
-      data-testid="embed-iframe"
-      style="border-radius:12px"
-      src="https://open.spotify.com/embed/album/5WulAOx9ilWy1h8UGZ1gkI?utm_source=generator&theme=0"
-      width="100%"
-      height="352"
-      frameBorder="0"
-      :allowfullscreen="false"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    />
+      class="mx-auto rounded"
+      style="border: 0; width: 350px; height: 442px;"
+      src="https://bandcamp.com/EmbeddedPlayer/track=3546336673/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
+      seamless
+    >
+      <a href="https://babenametheband.bandcamp.com/track/charles-i">Charles I by babename</a>
+    </iframe>
   </UPageSection>
 </template>
