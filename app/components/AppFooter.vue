@@ -2,13 +2,17 @@
 const columns = [{
   label: 'Music',
   children: [{
-    label: 'Spotify'
+    label: 'Spotify',
+    to: 'https://open.spotify.com/artist/5YJ1Yt1pYH1b3YJ0m8kK3E'
   }, {
-    label: 'Apple Music'
+    label: 'Apple Music',
+    to: 'https://music.apple.com/us/artist/babename/1530247323'
   }, {
-    label: 'Bandcamp'
+    label: 'Bandcamp',
+    to: 'https://babenametheband.bandcamp.com/'
   }, {
-    label: 'YouTube'
+    label: 'YouTube',
+    to: 'https://music.youtube.com/channel/UC5K4uf6hPQo1jFKpHQGegzg'
   }]
 }, {
   label: 'Connect',
@@ -37,12 +41,12 @@ const columns = [{
   />
 
   <UFooter :ui="{ top: 'border-b border-default' }">
-    <!-- <template #top>
+    <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
-            <EmailSignupForm />
-            <div class="text-sm font-semibold mt-6">
+            <!-- <EmailSignupForm /> -->
+            <div class="text-sm font-semibold">
               Contact:
             </div>
             <ULink
@@ -54,7 +58,7 @@ const columns = [{
           </template>
         </UFooterColumns>
       </UContainer>
-    </template> -->
+    </template>
 
     <template #left>
       <p class="text-sm text-muted">

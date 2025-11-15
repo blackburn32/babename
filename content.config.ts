@@ -20,6 +20,7 @@ const createLinkSchema = () => z.object({
 
 const createFeatureSchema = () => createBaseSchema().extend({
   icon: z.string().optional().editor({ input: 'icon' }),
+  to: z.string().optional(),
   ui: z.object({
     leading: z.string().optional()
   }).editor({ hidden: true })
@@ -42,7 +43,9 @@ export const collections = {
       }),
       album: z.object({
         headline: z.string(),
-        description: z.string()
+        description: z.string(),
+        imageSrc: z.string().nonempty().editor({ input: 'image' }),
+        imageAlt: z.string().nonempty()
       }),
       email: z.object({
         header: z.string(),

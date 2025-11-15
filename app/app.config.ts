@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  comingSoonMode: true,
+  comingSoonMode: false,
   ui: {
     colors: {
       primary: 'violet',

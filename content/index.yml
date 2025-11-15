@@ -16,20 +16,28 @@ listen:
   links:
     - title: Spotify
       icon: i-simple-icons-spotify
+      to: 'https://open.spotify.com/artist/1sGhJOAOc0ysdhikC7nDYV'
     - title: Apple Music
       icon: i-simple-icons-applemusic
+      to: 'https://music.apple.com/us/artist/babename/1849523897'
     - title: Bandcamp
       icon: i-simple-icons-bandcamp
+      to: 'https://babenametheband.bandcamp.com'
     - title: YouTube
       icon: i-simple-icons-youtube
+      to: 'https://music.youtube.com/channel/UC5K4uf6hPQo1jFKpHQGegzg'
     - title: SoundCloud
       icon: i-simple-icons-soundcloud
+      to: 'https://soundcloud.com/babename_theband'
     - title: Tidal
       icon: i-simple-icons-tidal
+      to: 'https://tidal.com/artist/69111927'
 
 album:
   headline: Our [debut album]{.text-primary} is almost here!
   description: Out on February 27, 2026
+  imageSrc: https://ik.imagekit.io/alnazmrug/babename/Album%20Cover%20Hightlights%20LP-babename.jpg?updatedAt=1763174046563
+  imageAlt: babename Highlights album cover
 
 email:
   header: "Sign up for notifications:"

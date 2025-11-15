@@ -20,7 +20,11 @@ const page = await usePageContent()
           class="sm:*:leading-11"
         />
       </template>
-      <USkeleton class="w-64 h-64 self-center mx-auto" />
+      <NuxtImg
+        :src="page.album.imageSrc"
+        :alt="page.album.imageAlt"
+        class="w-64 h-64 self-center mx-auto rounded-lg shadow-lg object-cover"
+      />
       <div class="flex flex-col mx-auto gap-2">
         <UButton
           to="http://docs.google.com/forms/d/e/1FAIpQLSfduXtFdb29g0z3bVj-UnFHqI5PTCoOwyoFFcLE_0qhLoEHEQ/viewform"
