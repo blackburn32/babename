@@ -37,7 +37,7 @@ const columns = [{
   />
 
   <UFooter :ui="{ top: 'border-b border-default' }">
-    <template #top>
+    <!-- <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
@@ -54,7 +54,7 @@ const columns = [{
           </template>
         </UFooterColumns>
       </UContainer>
-    </template>
+    </template> -->
 
     <template #left>
       <p class="text-sm text-muted">
