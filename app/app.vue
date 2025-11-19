@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-const appConfig = useAppConfig()
 
 const color = computed(() => colorMode.value === 'dark' ? '#171717' : 'white')
 
@@ -32,6 +31,6 @@ useSeoMeta({
       <NuxtPage />
     </UMain>
 
-    <AppFooter v-if="!appConfig.comingSoonMode" />
+    <AppFooter />
   </UApp>
 </template>
