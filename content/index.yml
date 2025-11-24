@@ -26,9 +26,6 @@ listen:
     - title: YouTube
       icon: i-simple-icons-youtube
       to: 'https://music.youtube.com/channel/UC5K4uf6hPQo1jFKpHQGegzg'
-    - title: SoundCloud
-      icon: i-simple-icons-soundcloud
-      to: 'https://soundcloud.com/babename_theband'
     - title: Tidal
       icon: i-simple-icons-tidal
       to: 'https://tidal.com/artist/69111927'
@@ -49,7 +46,7 @@ email:
   errorToastDescription: "Something went wrong. Please try again."
 
 about:
-  title: 'Who are [we?]{.text-primary}'
+  title: 'Who we [are]{.text-primary}'
   description: We're an indie rock band from Seattle, WA, blending heartfelt lyrics with energetic guitar-driven sound. Meet the members behind the music (left to right)
   images:
     band: 'https://ik.imagekit.io/alnazmrug/babename/band.jpg?updatedAt=1761250166563'
@@ -68,27 +65,13 @@ about:
       class: border-l border-default pt-4 pl-4
 
 bio:
-  headline: What are we [about?]{.text-primary}
+  headline: What we're [about]{.text-primary}
   content: |
-    At the intersection of indie rock, dreamy pop, and jangly folk one finds the fearlessly vulnerable
-    world of babename. Jamie Averley writes from the heart -- specifically the heart of a pandemic-
-    times-baby-queer stumbling their way into a life worth living. Mildly awkward and painfully
-    sincere, babename looks at the world through reborn eyes. With gentle wit and melody, their
-    journal-esque overshares bring us into journey through fantasies of new beginnings, sapphic
-    yearning, and musings on identity, power, and possibility.
+    At the intersection of indie rock, dreamy pop, and jangly folk one finds the fearlessly vulnerable world of babename. Jamie Averley writes from the heart -- specifically the heart of a pandemic- times-baby-queer stumbling their way into a life worth living. Mildly awkward and painfully sincere, babename looks at the world through reborn eyes. With gentle wit and melody, their journal-esque overshares bring us into journey through fantasies of new beginnings, sapphic yearning, and musings on identity, power, and possibility.
 
-    For as long as they can remember, music has been the way Jamie Averley makes sense of the
-    world. Songwriting offers both a window into someone’s thoughts and an emotional outlet in a
-    way no other form of writing can. During a period of solitude and self-reckoning, music became
-    even more intertwined with identity. Coming into their trans identity offered inspiration and
-    liberation.
+    For as long as they can remember, music has been the way Jamie Averley makes sense of the world. Songwriting offers both a window into someone’s thoughts and an emotional outlet in a way no other form of writing can. During a period of solitude and self-reckoning, music became even more intertwined with identity. Coming into their trans identity offered inspiration and liberation.
 
-    Highlights is a time capsule of transformation. A collection of songs about queerness, self-
-    discovery, loss, and the courage to return to oneself. Still early in their career, Averley
-    approaches their art with gratitude and curiosity. Each deeper step - writing, recording,
-    performing - has returned meaning tenfold. “My voice, even as it wavers, has something to say”
-    says Averley. “These songs have given me clarity and self-knowledge. I only hope they can do
-    the same for someone else.”
+    Highlights is a time capsule of transformation. A collection of songs about queerness, self- discovery, loss, and the courage to return to oneself. Still early in their career, Averley approaches their art with gratitude and curiosity. Each deeper step - writing, recording, performing - has returned meaning tenfold. “My voice, even as it wavers, has something to say” says Averley. “These songs have given me clarity and self-knowledge. I only hope they can do the same for someone else.”
 
 shows:
   headline: Catch us [live]{.text-primary}
@@ -98,6 +81,10 @@ shows:
       venue: Cocoa Legato
       location: Seattle, WA
       ticketLink: 'https://tickets.venuepilot.com/e/babename-lauren-fernandez-2025-12-06-cocoa-legato-seattle-001453'
+    - date: 'November 22, 2025'
+      venue: Horseshoe Bar & Cabaret
+      location: Everett, WA
+      ticketLink: '#'
     - date: 'October 29, 2025'
       venue: The Sunset Tavern
       location: Seattle, WA

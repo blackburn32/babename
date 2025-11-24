@@ -12,6 +12,55 @@ const props = withDefaults(defineProps<{
 
 const page = await usePageContent()
 
+const eventsStructuredData = computed(() => {
+  if (!page.value?.shows?.list) return []
+
+  return page.value.shows.list.map((show) => {
+    const showDate = new Date(show.date)
+    const event: Record<string, unknown> = {
+      '@context': 'https://schema.org',
+      '@type': 'MusicEvent',
+      name: `babename the band at ${show.venue}`,
+      startDate: showDate.toISOString().split('T')[0],
+      location: {
+        '@type': 'Place',
+        name: show.venue,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: show.location.split(',')[0]?.trim(),
+          addressRegion: show.location.split(',')[1]?.trim()
+        }
+      },
+      performer: {
+        '@type': 'MusicGroup',
+        name: 'babename the band',
+        url: 'https://www.babenametheband.com'
+      },
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode'
+    }
+
+    if (show.ticketLink && show.ticketLink !== '#') {
+      event.offers = {
+        '@type': 'Offer',
+        url: show.ticketLink,
+        availability: 'https://schema.org/InStock'
+      }
+    }
+
+    return event
+  })
+})
+
+useHead({
+  script: computed(() =>
+    eventsStructuredData.value.map(event => ({
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(event)
+    }))
+  )
+})
+
 type ShowRow = {
   date: string
   venue: string
