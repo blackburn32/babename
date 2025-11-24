@@ -33,7 +33,7 @@ listen:
 album:
   headline: Our [debut album]{.text-primary} is almost here!
   description: Out on February 27, 2026
-  imageSrc: https://ik.imagekit.io/alnazmrug/babename/Album%20Cover%20Hightlights%20LP-babename.jpg?updatedAt=1763174046563
+  imageSrc: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Album%20Cover%20Hightlights%20LP-babename.jpg?updatedAt=1763948953727
   imageAlt: babename Highlights album cover
 
 email:
@@ -49,7 +49,7 @@ about:
   title: 'Who we [are]{.text-primary}'
   description: We're an indie rock band from Seattle, WA, blending heartfelt lyrics with energetic guitar-driven sound. Meet the members behind the music (left to right)
   images:
-    band: 'https://ik.imagekit.io/alnazmrug/babename/band.jpg?updatedAt=1761250166563'
+    band: 'https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Band1-Wayne%20Foley.jpg?updatedAt=1763948954311'
   members:
     - title: Alex
       description: Drums

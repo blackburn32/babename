@@ -23,6 +23,11 @@ const page = await usePageContent()
       <NuxtImg
         :src="page.album.imageSrc"
         :alt="page.album.imageAlt"
+        width="256"
+        height="256"
+        quality="80"
+        format="webp"
+        loading="lazy"
         class="w-64 h-64 self-center mx-auto rounded-lg shadow-lg object-cover"
       />
       <div class="flex flex-col mx-auto gap-2">

@@ -21,10 +21,14 @@ const page = await usePageContent()
         class="sm:*:leading-11"
       />
     </template>
-    <img
+    <NuxtImg
       :src="page.about.images.band"
       :alt="page.about.title"
+      width="800"
+      quality="80"
+      format="webp"
+      loading="lazy"
       class="block left-0 w-full max-w-2xl"
-    >
+    />
   </UPageSection>
 </template>

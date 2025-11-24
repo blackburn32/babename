@@ -10,6 +10,10 @@ const image = computed(() => page.value?.hero.backgroundImage || 'https://ik.ima
   >
     <NuxtImg
       :src="image"
+      width="1920"
+      quality="80"
+      format="webp"
+      loading="eager"
       class="pointer-events-none left-0 top-0 object-cover w-full max-h-[100vh]"
       alt="babename"
     />

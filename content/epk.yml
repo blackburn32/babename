@@ -7,21 +7,21 @@ pressPhotos:
   headline: Press [Photos]{.text-primary}
   description: High-resolution press photos available for download. Please credit 'babename' in all publications.
   images:
-    - url: https://ik.imagekit.io/alnazmrug/babename/stairs2.jpg?updatedAt=1761779930775
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Band2-Wayne%20Foley.jpg?updatedAt=1763948954656
       alt: babename on the stairs
-    - url: https://ik.imagekit.io/alnazmrug/babename/far.jpg?updatedAt=1761779930821
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Band6-Wayne%20Foley.jpg?updatedAt=1763948954743
       alt: babename band photo
-    - url: https://ik.imagekit.io/alnazmrug/babename/stairs.jpg?updatedAt=1761779931149
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Band4-Wayne%20Foley.jpg?updatedAt=1763948954784
       alt: babename on the stairs again
-    - url: https://ik.imagekit.io/alnazmrug/babename/jamie1.JPEG?updatedAt=1762972642540
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Jamie1-Grayson%20Wennberg.JPEG?updatedAt=1763948953681
       alt: Jamie headshot
-    - url: https://ik.imagekit.io/alnazmrug/babename/stairs3.jpg?updatedAt=1762974084831
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Band3-Wayne%20Foley.jpg?updatedAt=1763948953740
       alt: babename on the stairs once more
-    - url: https://ik.imagekit.io/alnazmrug/babename/jamie2.JPEG?updatedAt=1762972643012
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Jamie2-Grayson%20Wennberg.JPEG?updatedAt=1763948953368
       alt: Jamie with a crown
-    - url: https://ik.imagekit.io/alnazmrug/babename/jamie4.jpg?updatedAt=1762972643182
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Jamie4-Christina%20Hickman.jpg?updatedAt=1763948954555
       alt: Jamie by a tree
-    - url: https://ik.imagekit.io/alnazmrug/babename/jamie3.jpg?updatedAt=1762974178804
+    - url: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Jamie3-Wayne%20Foley.jpg?updatedAt=1763948953692
       alt: Jamie with an umbrella
 
 music:
