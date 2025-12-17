@@ -45,7 +45,6 @@ const columns = [{
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
-            <!-- <EmailSignupForm /> -->
             <div class="text-sm font-semibold">
               Contact:
             </div>

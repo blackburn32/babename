@@ -33,7 +33,7 @@ listen:
 album:
   headline: Our [debut album]{.text-primary} is almost here!
   description: Out on February 27, 2026
-  imageSrc: https://ik.imagekit.io/alnazmrug/babename/babename%20Press%20Photos/Album%20Cover%20Hightlights%20LP-babename.jpg?updatedAt=1763948953727
+  imageSrc: https://ik.imagekit.io/alnazmrug/babename/album.jpg
   imageAlt: babename Highlights album cover
 
 email:

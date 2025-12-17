@@ -6,7 +6,7 @@ const page = await usePageContent()
   <UPageSection
     v-if="page"
     id="patreon"
-    class="mb-32 overflow-hidden"
+    class="overflow-hidden"
     :title="page.patreon.headline"
     :description="page.patreon.description"
     :plans="page.patreon.levels"

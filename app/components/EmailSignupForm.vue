@@ -1,80 +1,51 @@
-<script setup lang="ts">
-import { z } from 'zod'
-
-const emit = defineEmits<{
-  submit: [email: string]
-}>()
-
-const page = await usePageContent()
-
-const emailFormSchema = z.object({
-  email: z.string().email('Please enter a valid email address')
-})
-
-type EmailForm = z.infer<typeof emailFormSchema>
-
-const emailForm = reactive<EmailForm>({
-  email: ''
-})
-
-const isSubmitting = ref(false)
-const toast = useToast()
-
-async function handleEmailSubmit() {
-  isSubmitting.value = true
-  try {
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    const submittedEmail = emailForm.email
-    emailForm.email = ''
-    emit('submit', submittedEmail)
-    toast.add({
-      title: page.value?.email.successToastTitle,
-      description: page.value?.email.successToastDescription,
-      icon: 'i-lucide-check-circle',
-      color: 'primary'
-    })
-  } catch (error) {
-    console.error('Error submitting email:', error)
-    toast.add({
-      title: page.value?.email.errorToastTitle,
-      description: page.value?.email.errorToastDescription,
-      icon: 'i-lucide-circle-x',
-      color: 'error'
-    })
-  } finally {
-    isSubmitting.value = false
-  }
-}
-</script>
-
 <template>
-  <UForm
-    v-if="page"
-    :schema="emailFormSchema"
-    :state="emailForm"
-    @submit="handleEmailSubmit"
-  >
-    <UFormField
-      name="email"
-      :label="page.email.header"
-    >
-      <UInput
-        v-model="emailForm.email"
-        :placeholder="page.email.placeholder"
-        size="md"
-        type="email"
-        class="w-full"
-      >
-        <template #trailing>
-          <UButton
-            type="submit"
-            size="xs"
-            :label="page.email.submitLabel"
-            :loading="isSubmitting"
-            :disabled="isSubmitting"
-          />
-        </template>
-      </UInput>
-    </UFormField>
-  </UForm>
+  <iframe :src="iframeSrc" width="100%" height="220px" title="newsletter-widget" scrolling="no" class="overflow-hidden border-0"></iframe>
 </template>
+
+<script setup lang="ts">
+const colorMode = useColorMode()
+
+// Track resolved dark mode, only render after mounted to avoid hydration mismatch
+const isMounted = ref(false)
+onMounted(() => {
+  isMounted.value = true
+})
+
+const isDark = computed(() => {
+  if (!isMounted.value) return false
+  // Handle 'system' preference by checking the actual resolved value
+  if (colorMode.preference === 'system') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  return colorMode.value === 'dark'
+})
+
+const iframeSrc = computed(() => {
+  // Site colors matching main.css and app.config.ts
+  const bgColor = isDark.value ? 'rgba(10,10,10,1)' : 'rgba(250,250,250,1)' // neutral-950 / neutral-50
+  const textColor = isDark.value ? 'rgba(250,250,250,1)' : 'rgba(10,10,10,1)'
+  const primaryColor = 'rgba(139,92,246,1)' // violet-500
+
+  const params = new URLSearchParams({
+    headerTextColor: textColor,
+    backgroundColor: bgColor,
+    ctaBackgroundColor: primaryColor,
+    title: 'MAILING LIST',
+    headerTextStyle: 'normal',
+    headerText: 'Sign up to get the latest updates',
+    font: 'Public Sans',
+    ctaIcon: 'show',
+    ctaBorderRadius: '4px',
+    ctaBorderWidth: '2px',
+    ctaBorderColor: primaryColor,
+    ctaFontColor: 'rgba(255,255,255,1)',
+    alignment: 'center',
+    emailInputField: 'show',
+    ctaLabel: 'Subscribe',
+    layout: 'wide',
+    locale: 'en'
+  })
+
+  return `https://bandsintown.com/artist/15625517/email_signup_form?${params.toString()}`
+})
+</script>

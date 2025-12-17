@@ -12,7 +12,7 @@ const page = await usePageContent()
     <template #title>
       <MDC :value="page.cta.title" />
     </template>
-
+    <EmailSignupForm />
     <LazyStarsBg />
   </UPageCTA>
 </template>

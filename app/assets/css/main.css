@@ -6,6 +6,7 @@
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
   --font-logo: 'MayflowerAntique', sans-serif;
+  --font-headline: 'Cormorant Garamond', serif;
 }
 
 :root {

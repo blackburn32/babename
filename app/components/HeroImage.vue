@@ -17,10 +17,10 @@ const image = computed(() => page.value?.hero.backgroundImage || 'https://ik.ima
       class="pointer-events-none left-0 top-0 object-cover w-full max-h-[100vh]"
       alt="babename"
     />
-    <div class="absolute top-5 left-5 text-neutral-950 font-logo text-3xl sm:text-4xl">
+    <div class="absolute top-5 left-5 text-neutral-950 font-headline text-3xl sm:text-4xl">
       {{ page.hero.headline }}
     </div>
-    <div class="absolute bottom-5 right-5 text-neutral-50 font-logo text-3xl sm:text-4xl">
+    <div class="absolute bottom-5 right-5 text-neutral-50 font-headline text-3xl sm:text-4xl">
       {{ page.hero.description }}
     </div>
   </div>
