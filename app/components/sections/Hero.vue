@@ -32,7 +32,7 @@ const page = await usePageContent()
       />
       <div class="flex flex-col mx-auto gap-2">
         <UButton
-          to="http://docs.google.com/forms/d/e/1FAIpQLSfduXtFdb29g0z3bVj-UnFHqI5PTCoOwyoFFcLE_0qhLoEHEQ/viewform"
+          to="https://babenametheband.bandcamp.com/album/highlights"
           target="_blank"
           size="lg"
           label="Pre-Order Now"
