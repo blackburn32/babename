@@ -23,8 +23,8 @@ const page = await usePageContent()
 
     <iframe
       class="mx-auto rounded"
-      style="border: 0; width: 350px; height: 442px;"
-      src="https://bandcamp.com/EmbeddedPlayer/track=3546336673/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
+      style="border: 0; width: 350px; height: 465px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=4191014090/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
       seamless
     />
   </UPageSection>
