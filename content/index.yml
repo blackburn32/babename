@@ -7,7 +7,7 @@ description: Indie rock from the heart. Stream our music, catch us live, and joi
 
 hero:
   headline: Highlights
-  description: coming 2.27.26
+  description: babename
   backgroundImage: https://ik.imagekit.io/alnazmrug/babename/hero.jpg?updatedAt=1761250159137
 
 listen:
@@ -31,8 +31,8 @@ listen:
       to: 'https://tidal.com/artist/69111927'
 
 album:
-  headline: Our [debut album]{.text-primary} is almost here!
-  description: Out on February 27, 2026
+  headline: Our [debut album]{.text-primary} is out now!
+  description: Order your copy today!
   imageSrc: https://ik.imagekit.io/alnazmrug/babename/album.jpg
   imageAlt: babename Highlights album cover
 

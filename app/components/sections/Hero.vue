@@ -35,7 +35,7 @@ const page = await usePageContent()
           to="https://babenametheband.bandcamp.com/album/highlights"
           target="_blank"
           size="lg"
-          label="Pre-Order Now"
+          label="Get a copy"
           color="primary"
           variant="solid"
         />
