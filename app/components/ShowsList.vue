@@ -87,7 +87,7 @@
       data-affil-code=""
       data-bit-logo-position="bottomRight"
       :data-bit-logo-color="mutedColor"
-    ></a>
+    />
   </div>
 </template>
 

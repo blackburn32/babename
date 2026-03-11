@@ -20,6 +20,10 @@ useSeoMeta({
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
+    <SectionsEpkPressHits />
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
     <SectionsEpkBio />
 
     <USeparator :ui="{ border: 'border-primary/30' }" />

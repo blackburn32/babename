@@ -24,15 +24,15 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'MusicGroup',
-        name: 'babename the band',
-        url: 'https://www.babenametheband.com',
-        genre: 'Indie Rock',
-        foundingLocation: {
+        'name': 'babename the band',
+        'url': 'https://www.babenametheband.com',
+        'genre': 'Indie Rock',
+        'foundingLocation': {
           '@type': 'Place',
-          name: 'Seattle, WA'
+          'name': 'Seattle, WA'
         },
-        image: 'https://ik.imagekit.io/alnazmrug/babename/hero.jpg',
-        sameAs: [
+        'image': 'https://ik.imagekit.io/alnazmrug/babename/hero.jpg',
+        'sameAs': [
           'https://open.spotify.com/artist/1sGhJOAOc0ysdhikC7nDYV',
           'https://music.apple.com/us/artist/babename/1849523897',
           'https://babenametheband.bandcamp.com',

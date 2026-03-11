@@ -26,8 +26,8 @@ pressPhotos:
 
 music:
   headline: Our [Music]{.text-primary}
-  description: Check out our debut album now! Stream "Highlights" on SoundCloud.
-  embedCode: '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2105432435%3Fsecret_token%3Ds-RN5vb2FoMtH&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/babename_theband" title="babename" target="_blank" style="color: #cccccc; text-decoration: none;">babename</a> · <a href="https://soundcloud.com/babename_theband/sets/highlights/s-RN5vb2FoMtH" title="Highlights" target="_blank" style="color: #cccccc; text-decoration: none;">Highlights</a></div>'
+  description: Check out our debut album now! Stream "Highlights" on Bandcamp.
+  embedCode: '<iframe style="border: 0; width: 350px; height: 468px;" src="https://bandcamp.com/EmbeddedPlayer/album=4191014090/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://babenametheband.bandcamp.com/album/highlights">Highlights by babename</a></iframe>'
 
 bio:
   headline: About [Us]{.text-primary}
@@ -51,6 +51,38 @@ bio:
     “Coming out is a process, not an event,” Averley reflects. “Each of us is becoming someone new every day we exist. If this record can be a salve for even one queer, trans, or questioning kid… if it gives someone permission to love and embrace who they are, then everything I’ve put into this was worth it.”
 
     Still early in their career, Averley approaches their art with gratitude and curiosity. Each deeper step - writing, recording, performing - has returned meaning tenfold. “My heart lives very much on my sleeve, which is what feels sincere to me, and I think matches my desire to make art that is grounded in queer storytelling and connection” says Averley. “My voice, even as it wavers, has something to say,” they add. “These songs have given me clarity and self-knowledge. I only hope they can do the same for someone else.”
+
+pressHits:
+  headline: Press [Hits]{.text-primary}
+  description: Selected press coverage and reviews.
+  items:
+    - title: Space 101 FM
+      description: "Radio Play, The Wave Show"
+    - title: "Track Review - Charles I"
+      description: "Girl at the Rock Show"
+      outlet: Girl at the Rock Show
+      quote: "\"Charles I\" is the perfect reminder to be yourself and stay true to yourself in a world that is constantly trying to put you into a box. Don't want to get that deep with things today? Have no fear, this song is also one of those tracks that is just truly lovely to listen to."
+      image: https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/241082975_246837860777521_2883764545703458353_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=CpCL_bJ_QiAQ7kNvwFBlduz&_nc_oc=Adn1oT5qLDyiIOl_DlyBW3VT5lA864oRb_I3uFmkMq4CcYGrz5wmjKGYfkceBV6upNY&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=K9N0KO5f4eeiduOFBEAkWQ&_nc_ss=8&oh=00_AfxFn6l5zW4rbP6IjTnITwhtMj6dJKR5xg9WJxKH9l5lbg&oe=69B79141
+      to: https://girlattherockshows.com/2025/11/16/babename-charles-i/
+    - title: "Track Premier - Highlights (single)"
+      description: "Rock and Roll Globe"
+      outlet: Rock and Roll Globe
+      quote: "Highlights is \"a poignant collection of songs about queer strength in the face of old trauma and new adversity, and finally channeling one's energy into an absolute truth.\""
+      image: http://rockandrollglobe.com/wp-content/uploads/2019/02/Ron-Hart-96x96.jpg
+      to: https://rockandrollglobe.com/rock/listen-babename-shares-highlights/
+    - title: "Album Premier - Highlights"
+      description: "Ghettoblaster Magazine"
+      outlet: Ghettoblaster Magazine
+      image: https://secure.gravatar.com/avatar/fe8c300aeba6d8bd80254e94c0b6382ea61cfd521b2964e6725bf1f107d0260e?s=90&d=mm&r=g
+      to: https://ghettoblastermagazine.com/features/album-stream/babename-highlights/
+    - title: "Album Review - Highlights"
+      description: "Loud Women"
+      outlet: Loud Women
+      quote: "Intellectually dense, politically charged, and lyrically haunting. Averley's ethereal, stacked vocals give the listener the impression of being inside the narrator's head, an intimate moment in time for each track on their debut album. While Seattle is home to quite a few dreamy indie/pop bands, make no mistake, babename is not nameless in the crowd."
+      image: https://2.gravatar.com/avatar/0920d971281420cbf9d9ebfabd1f1e0df6c97cf83949563fb88953ffb103db61?d=identicon&r=g&s=256
+      to: https://loudwomen.org/2026/02/27/babenames-debut-album-highlights-is-a-story-of-claiming-personal-power/
+    - title: KBCS
+      description: "Radio Play"
 
 contact:
   headline: Contact [Information]{.text-primary}

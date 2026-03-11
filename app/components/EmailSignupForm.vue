@@ -1,5 +1,12 @@
 <template>
-  <iframe :src="iframeSrc" width="100%" height="220px" title="newsletter-widget" scrolling="no" class="overflow-hidden border-0"></iframe>
+  <iframe
+    :src="iframeSrc"
+    width="100%"
+    height="220px"
+    title="newsletter-widget"
+    scrolling="no"
+    class="overflow-hidden border-0"
+  />
 </template>
 
 <script setup lang="ts">

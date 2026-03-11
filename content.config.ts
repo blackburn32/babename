@@ -138,6 +138,18 @@ export const collections = {
         headline: z.string().nonempty(),
         description: z.string().nonempty()
       }),
+      pressHits: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          quote: z.string().optional(),
+          image: z.string().optional().editor({ input: 'image' }),
+          to: z.string().optional(),
+          outlet: z.string().optional()
+        }))
+      }),
       socials: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
